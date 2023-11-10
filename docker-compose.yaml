@@ -1,0 +1,18 @@
+
+services:
+  webapp:
+    build: .
+    ports:
+      - "5000:5000"
+  
+  mysql:
+    build:
+      context: .
+      dockerfile: dockerfile.mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-backup:/var/lib/mysql
+
+  
+

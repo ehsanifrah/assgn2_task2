@@ -1,0 +1,14 @@
+# Use an official MySQL image as the base
+FROM mysql:latest
+
+# Set environment variables for MySQL
+ENV MYSQL_ROOT_PASSWORD=0000
+ENV MYSQL_DATABASE=my-database
+ENV MYSQL_USER=ifrahehsan
+ENV MYSQL_PASSWORD=1111
+
+# Expose the port MySQL is reachable on
+# EXPOSE 3306
+
+# Set the default command for the container to mysql server
+CMD ["mysqld"]
